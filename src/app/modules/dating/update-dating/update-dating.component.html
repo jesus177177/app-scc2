@@ -1,0 +1,22 @@
+<h5 class="center-align">Editar Cita</h5>
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="col s12">
+
+    <div class="input-field col s12">
+        <input  type="text" class="validate" formControlName="nombre">
+    </div>
+    <div class="input-field col s6">
+        <input  type="text" class="validate" formControlName="telefono">
+    </div>
+    <div class="input-field col s6">
+        <input  type="date" class="validate" formControlName="fecha">
+    </div>
+    <div class="input-field col s6">
+        <input  type="text" class="validate" formControlName="hora">
+    </div>
+    <div class="input-field col s6">
+        <input type="text" class="validate" formControlName="consultorio">
+    </div>
+    <div class="center-align col s12">
+        <button class="waves-effect blue lighten-1 btn col s12" type="submit">Editar</button>
+    </div>
+</form>

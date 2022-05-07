@@ -1,0 +1,52 @@
+<div class="col s12" style="text-align: center;">
+    <h4>Editar Paciente</h4>
+</div>
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="input-field col s6">
+        <input id="nombre" formControlName="nombre" type="text" class="validate">
+        <label for="nombre">Nombre(s)</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="apellidos" type="text" class="validate" name="apellidos" formControlName="apellidos">
+        <label for="apellidos">Apellido(s)</label>
+    </div>
+    <div class="input-field col s12">
+        <input id="direccion" type="text" class="validate" name="direccion" formControlName="direccion">
+        <label for="direccion">Direccion</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="peso" type="number" class="validate" name="peso" formControlName="peso">
+        <label for="peso">Peso</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="fecha" type="date" class="validate" name="fecha" formControlName="fecha">
+        <label for="fecha"></label>
+    </div>
+    <div class="input-field col s6">
+        <input id="edad" type="text" class="validate" name="edad" formControlName="edad">
+        <label for="edad">Edad</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="talla" type="text" class="validate" name="talla" formControlName="talla">
+        <label for="talla">Talla</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="consultorio" type="text" class="validate" name="consultorio" formControlName="consultorio">
+        <label for="consultorio">Consultorio</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="imc" type="number" class="validate" name="imc" formControlName="imc">
+        <label for="imc">IMC</label>
+    </div>
+    <div class="input-field col s12">
+        <textarea name="historia" id="historia" cols="30" rows="10" formControlName="historias"
+        class="materialize-textarea">
+
+        </textarea>
+        <label for="historia">Seguimiento</label>
+    </div>
+    <br>
+    <div class="col s12">
+        <button class="waves-effect blue lighten-1 btn" type="submit">Editar Paciente</button>
+    </div>
+</form>

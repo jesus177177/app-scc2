@@ -1,0 +1,16 @@
+.header {
+    background-color: var(--color-barra);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 15px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+.header i {
+    font-size: 2rem;
+}
+.header span {
+    text-align: center;
+    display: block;
+}

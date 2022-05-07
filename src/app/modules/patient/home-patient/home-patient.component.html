@@ -1,0 +1,49 @@
+<br>
+<form>
+    <div class="input-field col s7" style="float: left;">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">Buscar Paciente</label>
+    </div>
+</form>
+<div class="col s12">
+    <table class="centered z-depth-4">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of patients">
+                <td>{{item.nombre}}  {{item.apellidos}}</td>
+                <td>{{item.edad}}</td>
+                <td class="acciones">
+                    <a routerLink="edit/{{item.id}}">
+                        <span class="material-icons md-light" style="color: orange;">create</span>
+                    </a>
+                
+                    <a>
+                        <span class="material-icons md-18" style="color: red;">delete</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active blue lighten-1"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+    <br>
+    <div class="col s3" style="float: right;">
+        <a routerLink="new" class="waves-effect blue lighten-1 btn">Nuevo Paciente</a>
+    </div>
+</div>
+<br>
+<br>

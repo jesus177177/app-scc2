@@ -1,0 +1,54 @@
+<br>
+<div class="col s12">
+    <form>
+        <div class="col s4">
+            <br>
+            <mat-form-field>
+                <mat-label>Selecione Consultorio</mat-label>
+                <mat-select>
+                    <mat-option>Guerrero</mat-option>
+                    <mat-option>Huetamo</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="input-field col s4">
+            <input id="buscar-cita" type="text" class="validate">
+            <label for="buscar-cita">Buscar cita</label>
+        </div>
+        <div class="input-field col s4">
+            <input type="date" />
+        </div>
+    </form>
+    <br>
+    <table class="responsive-table z-depth-4">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of datings">
+                <td>{{item.nombre}}</td>
+                <td>{{item.telefono}}</td>
+                <td>{{item.fecha}}</td>
+                <td>{{item.hora}}</td>
+                <td>
+                    <a routerLink="edit/{item.id}">
+                        <span class="material-icons md-light" style="color: orange;">create</span>
+                    </a>
+                    <a (click)="delete(item)">
+                        <span class="material-icons md-18" style="color: red;">delete</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="col s4" style="float: right;">
+        <a routerLink="new" class="waves-effect blue lighten-1 btn">Nueva cita</a>
+    </div>
+</div>
