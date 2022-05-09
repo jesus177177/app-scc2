@@ -48,6 +48,6 @@ export class UpdateDatingComponent implements OnInit {
     
     this.datingService.updateDating(this.updateForm.value, id);
     this.router.navigate(['dating']);
-
+    console.log(this.updateForm.value)
   }
 }

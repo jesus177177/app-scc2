@@ -5,6 +5,7 @@ import { DatingService } from 'src/app/services/dating.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from "@angular/router";
 
+
 @Component({
   selector: 'app-new-dating',
   templateUrl: './new-dating.component.html',
@@ -35,4 +36,5 @@ export class NewDatingComponent implements OnInit {
     console.log(this.createForm.value)
     this.router.navigate(['dating'])
   }
+  
 }
